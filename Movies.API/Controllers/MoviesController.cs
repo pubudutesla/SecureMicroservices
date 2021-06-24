@@ -13,7 +13,7 @@ namespace Movies.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize("ClientIdPolicy")] // Should be the policy added in DI AddPolicy
     public class MoviesController : ControllerBase
     {
         private readonly MoviesAPIContext _context;
